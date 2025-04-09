@@ -67,8 +67,6 @@
     video {
       border-radius: 16px;
       box-shadow: 0 0 20px #00ffea;
-      width: 800px; /* Increased from 600px */
-      height: auto; /* Changed to auto to maintain aspect ratio */
     }
 
     pre[data-text] {
@@ -78,7 +76,7 @@
       padding: 20px;
       overflow-y: auto;
       max-height: 80vh;
-      width: 500px;
+      width: 600px;
       font-size: 1.2rem;
       line-height: 1.5;
       color: #00ffea;
@@ -111,25 +109,6 @@
       background-color: #000;
       color: #ff00ff;
     }
-
-    /* Media query for responsive layout on smaller screens */
-    @media (max-width: 1366px) {
-      .container {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      video {
-        width: 90%;
-        max-width: 800px;
-      }
-      
-      pre[data-text] {
-        width: 90%;
-        max-width: 800px;
-        margin-top: 20px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -143,7 +122,7 @@
     <p>6. Adjust the browser window size for better visibility if needed.</p>
   </div>
   <div class="container">
-    <video autoplay muted></video>
+    <video width="600" height="800" autoplay muted></video>
     <pre data-text>Recognized Text Will Appear Here...</pre>
   </div>
   <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
